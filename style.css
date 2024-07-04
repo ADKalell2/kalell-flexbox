@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+*, ::after, ::before{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Slab', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 20px;
+    font-size: 1rem;
+    background-image: radial-gradient(#1f2b94,#151B54);
+    color: #fff;
+  }
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo{
+    width: 140px;
+
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a{
+    color:#fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+
+}
+
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #87CEEB;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+aside, .content{
+    padding:1.25rem;
+}
+
+aside{
+    margin-left: 20px;
+    flex: 1;
+    order:1;
+}
+
+aside ul, .content ul{
+    padding-left: 40px;
+}
+
+.title {
+    font-size: 50px;
+}
+
+.hero{
+    flex: 3;
+    order: 2;
+    display: inline-block;
+    text-align: center;
+}
+
+.content{
+    margin-right: 20px;
+    flex: 1;
+    order:3;
+}
+
+.main-content{
+    display:flex;
+    flex-direction: row;
+    
+  }
+
+.quote {
+    margin: 40px;
+    text-align: center;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 1.4em;
+}
+
+.author{
+    text-align: right;
+    margin-right: 60px;
+}
+
+.quote, .author{
+    font-size: 16px;
+    font-size: 1.75rem;
+}
+
+p{
+    line-height: 1.5;
+}
+
+span{
+    color:#87CEEB;
+}
+
+.col-2{
+    display: flex;
+    line-height: 26px;
+    font-size: 20px;
+    margin-bottom: 30px;
+    font-weight: 300;
+    letter-spacing: 0;
+}
+
+.intro{
+    flex: 1;
+    order: 1;
+}
+.end{
+    flex: 1;
+    order: 2;
+}
+.intro, .end{
+    margin: 50px;
+}
+
+.footer{
+    background-color: #59788e;
+    padding: 100px 0;
+}
+
+.footer h1{
+    font-size: 50px;
+    text-align: center;
+}
+
+.flex-container{
+    text-align: center;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    }
+
+    .flex-item {
+        padding: 5px;
+        width: 300px;
+        height: 300px;
+        margin-top: 10px;
+        line-height: 150px;
+        font-weight: bold;
+        font-size: 3em;
+        text-align: center;
+    }
+
+@media all and (max-width: 800px) {
+    nav {
+        justify-content: space-around;
+        flex-flow: column wrap;
+        padding: 0;
+      }
+    nav ul { 
+        text-align: center; 
+        padding: 10px;
+      }
+    nav li:last-of-type ul {
+        border-bottom: none;
+      }
+    .logo{
+        width: 100%;
+        height: 100%;
+      }
+}
+
+@media all and (max-width: 600px){
+    html, body{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        overflow-x: clip !important;
+    }
+
+    nav {
+        flex-flow: column wrap;
+        padding: 0;
+      }
+    nav ul { 
+        text-align: center; 
+        padding: 10px;
+      }
+    nav li:last-of-type ul {
+        border-bottom: none;
+      }
+    .logo{
+        width: 100%;
+        height: 100%;
+      }
+    .flex-container{
+        display:flex
+    }
+    .content{
+        flex:1; 
+        order:3;
+    }
+    .aside{
+        flex:0 1 300px;
+        order:2;
+        margin-left: 0;
+    }
+    .hero{
+        flex:5; 
+        order: 1;
+    }
+    .hero img{
+        width: 100%;
+        height: 100%;
+    }
+    .main-content{
+        flex-flow: column;
+    }
+    .quote{
+        font-size: 16px;
+        font-size: 1.4rem;
+    }
+    .author{
+        font-size: 16px;
+        font-size: 1.5rem;
+        margin-right: 0px;
+        text-align: center;
+    }
+    .intro, .end{
+        margin: 0;
+        padding: 12px;
+        font-size: 12px;
+    }
+}
